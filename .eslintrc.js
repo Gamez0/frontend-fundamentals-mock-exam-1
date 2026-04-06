@@ -64,7 +64,7 @@ module.exports = {
     'no-async-promise-executor': 'warn',
     '@typescript-eslint/prefer-as-const': 'warn',
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'warn',
-    '@typescript-eslint/no-restricted-types': 'warn',
+    // '@typescript-eslint/no-restricted-types': 'warn',
     '@typescript-eslint/no-inferrable-types': 'warn',
     // '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/naming-convention': [
