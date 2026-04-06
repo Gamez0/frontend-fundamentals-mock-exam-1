@@ -1,13 +1,5 @@
 import { http, isHttpError } from 'tosslib';
-
-interface SavingsProduct {
-  id: string;
-  name: string;
-  annualRate: number;
-  minMonthlyAmount: number;
-  maxMonthlyAmount: number;
-  availableTerms: number;
-}
+import { SavingsProduct } from '../types';
 
 export const getSavingsProducts = async (): Promise<SavingsProduct[]> => {
   try {
