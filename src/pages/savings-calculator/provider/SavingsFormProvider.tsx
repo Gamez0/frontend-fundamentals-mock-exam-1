@@ -1,8 +1,26 @@
-import { useForm } from 'react-hook-form';
+import { FormProvider, useForm, useFormContext } from 'react-hook-form';
 
-export default function SavingsFormProvider() {
-  const methods = useForm();
-  const onSubmit = (data: any) => console.log(data);
-
-  return <div>적금 계산기 폼</div>;
+interface SavingsFormValues {
+  targetAmount?: number;
+  monthlyDeposit?: number;
+  savingPeriod?: number;
 }
+
+interface SavingsFormProviderProps {
+  children: React.ReactNode;
+}
+
+export default function SavingsFormProvider({ children }: SavingsFormProviderProps) {
+  const methods = useForm<SavingsFormValues>();
+
+  return <FormProvider {...methods}>{children}</FormProvider>;
+}
+
+export const useSavingsFormValuesContext = (): Required<SavingsFormValues> => {
+  const { watch } = useFormContext<SavingsFormValues>();
+  const targetAmount = watch('targetAmount') ?? 0;
+  const monthlyDeposit = watch('monthlyDeposit') ?? 0;
+  const savingPeriod = watch('savingPeriod') ?? 0;
+
+  return { targetAmount, monthlyDeposit, savingPeriod };
+};
