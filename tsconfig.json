@@ -5,7 +5,7 @@
     "lib": ["esnext", "DOM", "DOM.Iterable"],
     "paths": {
       "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
+      "@shared/*": ["./src/shared/*"],
       "@pages/*": ["./src/pages/*"]
     },
     "allowImportingTsExtensions": true,
