@@ -1,0 +1,8 @@
+/*
+!/src
+.yarn/*
+node_modules/*
+dist/*
+
+index.html
+.yarnrc.yml
