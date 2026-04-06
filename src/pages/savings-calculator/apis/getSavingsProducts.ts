@@ -1,5 +1,5 @@
 import { http, isHttpError } from 'tosslib';
-import { SavingsProduct } from '../types';
+import { SavingsProduct } from '../savings-calculator.types';
 
 export const getSavingsProducts = async (): Promise<SavingsProduct[]> => {
   try {
