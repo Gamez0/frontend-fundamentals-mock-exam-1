@@ -33,10 +33,10 @@ module.exports = {
     '@typescript-eslint/indent': 'off',
     semi: 'off',
 
-    '@typescript-eslint/no-non-null-assertion': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
+    // '@typescript-eslint/no-non-null-assertion': 'off',
+    // '@typescript-eslint/no-explicit-any': 'off',
 
-    'no-extra-boolean-cast': 'off',
+    // 'no-extra-boolean-cast': 'off',
 
     'getter-return': 'warn',
 
@@ -44,7 +44,7 @@ module.exports = {
 
     '@typescript-eslint/no-use-before-define': 'off',
 
-    '@typescript-eslint/no-empty-interface': 'off',
+    // '@typescript-eslint/no-empty-interface': 'off',
 
     '@typescript-eslint/no-parameter-properties': 'off',
 
@@ -66,7 +66,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'warn',
     '@typescript-eslint/no-restricted-types': 'warn',
     '@typescript-eslint/no-inferrable-types': 'warn',
-    '@typescript-eslint/no-empty-function': 'off',
+    // '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/naming-convention': [
       'error',
       {
