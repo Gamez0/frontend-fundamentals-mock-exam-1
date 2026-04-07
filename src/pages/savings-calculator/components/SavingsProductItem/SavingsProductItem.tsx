@@ -1,9 +1,11 @@
 import { SavingsProduct } from '@/pages/savings-calculator/savings-calculator.types';
 import { useSelectedProductId, useSetSelectedProduct } from '@/pages/savings-calculator/stores/useSelectedProduct';
 import { Assets, colors, ListRow } from 'tosslib';
+
 interface SavingsProductItemProps {
   product: SavingsProduct;
 }
+
 export default function SavingsProductItem({ product }: SavingsProductItemProps) {
   const selectedProductId = useSelectedProductId();
   const setSelectedProduct = useSetSelectedProduct();

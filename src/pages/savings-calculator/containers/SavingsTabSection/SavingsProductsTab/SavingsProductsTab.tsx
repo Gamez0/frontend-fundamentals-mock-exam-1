@@ -2,7 +2,7 @@ import { useFilteredSavingsProducts } from '@/pages/savings-calculator/quries/sa
 import { Suspense } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { ListRow } from 'tosslib';
-import SavingsProductItem from './SavingsProductItem/SavingsProductItem';
+import SavingsProductItem from '@/pages/savings-calculator/components/SavingsProductItem/SavingsProductItem';
 
 export default function SavingsProductsTab() {
   return (
