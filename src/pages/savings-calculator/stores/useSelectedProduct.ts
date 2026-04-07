@@ -2,7 +2,7 @@ import { create } from 'zustand/react';
 
 interface SelectedProductState {
   selectedProductId: string | null;
-  setSelectedProduct: (id: string | null) => void;
+  setSelectedProduct: (id: string) => void;
 }
 
 const useSelectedProduct = create<SelectedProductState>(set => ({

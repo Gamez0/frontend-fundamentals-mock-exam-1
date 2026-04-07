@@ -12,7 +12,6 @@ export default function SavingsProductItem({ product }: SavingsProductItemProps)
 
   const handleProductClick = (productId: string) => {
     if (selectedProductId === productId) {
-      setSelectedProduct(null);
       return;
     }
     setSelectedProduct(productId);
