@@ -1,7 +1,7 @@
-import SavingsProductItem from '@/pages/savings-calculator/components/SavingsProductItem/SavingsProductItem';
 import { useTopAnnualRateProducts } from '@/pages/savings-calculator/quries/savings-products-queries';
 import { Suspense } from 'react';
 import { ListHeader, Spacing } from 'tosslib';
+import RecommendationProductItem from './RecommendationProductItem/RecommendationProductItem';
 
 export default function RecommendationProducts() {
   return (
@@ -18,7 +18,7 @@ function RecommendationProductsList() {
       <ListHeader title={<ListHeader.TitleParagraph fontWeight="bold">추천 상품 목록</ListHeader.TitleParagraph>} />
       <Spacing size={12} />
       {recommendationProducts.map(product => (
-        <SavingsProductItem key={product.id} product={product} />
+        <RecommendationProductItem key={product.id} product={product} />
       ))}
     </>
   );
