@@ -2,7 +2,7 @@ import TextFieldController from '@/shared/components/TextFieldController';
 import { formatLocalePrice } from '@/shared/utils/formatLocalePrice';
 import { parseNumberFromString } from '@/shared/utils/parseNumberFromString';
 
-export default function monthlyAmountField() {
+export default function MonthlyAmountField() {
   return (
     <TextFieldController
       name="monthlyAmount"
