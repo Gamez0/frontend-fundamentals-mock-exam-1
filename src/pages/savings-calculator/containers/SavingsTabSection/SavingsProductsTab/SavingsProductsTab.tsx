@@ -6,7 +6,7 @@ import { useSavingsFormValuesContext } from '@/pages/savings-calculator/provider
 
 export default function SavingsProductsTab() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>조건에 맞는 추천 상품을 찾는 중이에요.</div>}>
       <SavingsProductsList />
     </Suspense>
   );
