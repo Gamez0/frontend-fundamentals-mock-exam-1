@@ -1,7 +1,7 @@
 import { FormProvider, useForm, useFormContext } from 'react-hook-form';
 
 interface SavingsFormValues {
-  goalAmount?: number;
+  targetAmount?: number;
   monthlyAmount?: number;
   savingsPeriod?: number;
 }
@@ -18,9 +18,9 @@ export default function SavingsFormProvider({ children }: SavingsFormProviderPro
 
 export const useSavingsFormValuesContext = (): Required<SavingsFormValues> => {
   const { watch } = useFormContext<SavingsFormValues>();
-  const goalAmount = watch('goalAmount') ?? 0;
+  const targetAmount = watch('targetAmount') ?? 0;
   const monthlyAmount = watch('monthlyAmount') ?? 0;
   const savingsPeriod = watch('savingsPeriod') ?? 0;
 
-  return { goalAmount, monthlyAmount, savingsPeriod };
+  return { targetAmount, monthlyAmount, savingsPeriod };
 };
