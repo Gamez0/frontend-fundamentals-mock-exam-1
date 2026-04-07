@@ -9,7 +9,11 @@ import { colors, ListRow } from 'tosslib';
 export default function CalculationResults() {
   const selectedProductId = useSelectedProductId();
   if (!selectedProductId) {
-    return <ListRow contents={<ListRow.Texts type="1RowTypeA" top="상품을 선택해주세요." />} />;
+    return (
+      <div role="status" aria-live="polite">
+        <ListRow contents={<ListRow.Texts type="1RowTypeA" top="상품을 선택해주세요." />} />
+      </div>
+    );
   }
   return (
     <AsyncBoundary

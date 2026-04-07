@@ -17,7 +17,7 @@ export default function AsyncBoundary({ children, loadingFallback, errorFallback
         }
         const message = error instanceof Error ? error.message : '알 수 없는 오류가 발생했어요.';
         return (
-          <div>
+          <div role="alert">
             <p>{message}</p>
             {onRetry && (
               <button
@@ -33,7 +33,15 @@ export default function AsyncBoundary({ children, loadingFallback, errorFallback
         );
       }}
     >
-      <Suspense fallback={loadingFallback}>{children}</Suspense>
+      <Suspense
+        fallback={
+          <div role="status" aria-live="polite">
+            {loadingFallback}
+          </div>
+        }
+      >
+        {children}
+      </Suspense>
     </ErrorBoundary>
   );
 }
