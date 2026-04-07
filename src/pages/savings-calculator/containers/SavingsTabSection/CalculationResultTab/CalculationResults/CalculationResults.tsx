@@ -1,9 +1,9 @@
 import { useSavingsFormValuesContext } from '@/pages/savings-calculator/provider/SavingsFormProvider';
 import { useDetailSavingsProduct } from '@/pages/savings-calculator/quries/savings-products-queries';
 import { useSelectedProductId } from '@/pages/savings-calculator/stores/useSelectedProduct';
+import AsyncBoundary from '@/shared/components/AsyncBoundary';
 import { getExpectedSavingsEarnings } from '@/shared/utils/getExpectedSavingsEarnings';
 import { parseNumberFromString } from '@/shared/utils/parseNumberFromString';
-import { Suspense } from 'react';
 import { colors, ListRow } from 'tosslib';
 
 export default function CalculationResults() {
@@ -12,9 +12,12 @@ export default function CalculationResults() {
     return <ListRow contents={<ListRow.Texts type="1RowTypeA" top="상품을 선택해주세요." />} />;
   }
   return (
-    <Suspense fallback={<div>계산 결과를 불러오는 중이에요.</div>}>
+    <AsyncBoundary
+      loadingFallback={<div>계산 결과를 불러오는 중이에요.</div>}
+      errorFallback={<div>계산 결과를 불러오는 중 오류가 발생했어요.</div>}
+    >
       <CalculationResultsContent selectedProductId={selectedProductId} />
-    </Suspense>
+    </AsyncBoundary>
   );
 }
 

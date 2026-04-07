@@ -1,14 +1,17 @@
 import { useFilteredSavingsProducts } from '@/pages/savings-calculator/quries/savings-products-queries';
-import { Suspense } from 'react';
 import { ListRow } from 'tosslib';
 import SavingsProductItem from './SavingsProductItem/SavingsProductItem';
 import { useSavingsFormValuesContext } from '@/pages/savings-calculator/provider/SavingsFormProvider';
+import AsyncBoundary from '@/shared/components/AsyncBoundary';
 
 export default function SavingsProductsTab() {
   return (
-    <Suspense fallback={<div>조건에 맞는 추천 상품을 찾는 중이에요.</div>}>
+    <AsyncBoundary
+      loadingFallback={<div>적금 상품을 불러오는 중이에요.</div>}
+      errorFallback={<div>적금 상품을 불러오는 중 오류가 발생했어요.</div>}
+    >
       <SavingsProductsList />
-    </Suspense>
+    </AsyncBoundary>
   );
 }
 
