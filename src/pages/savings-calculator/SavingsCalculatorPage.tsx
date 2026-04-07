@@ -11,7 +11,6 @@ export function SavingsCalculatorPage() {
       <Spacing size={16} />
       <SavingsFormProvider>
         <SavingsForm />
-
         <Spacing size={24} />
         <Border height={16} />
         <Spacing size={8} />
