@@ -2,10 +2,10 @@ import TextFieldController from '@/shared/components/TextFieldController';
 import { formatLocalePrice } from '@/shared/utils/formatLocalePrice';
 import { parseNumberFromString } from '@/shared/utils/parseNumberFromString';
 
-export default function MonthlyDepositAmountField() {
+export default function monthlyAmountField() {
   return (
     <TextFieldController
-      name="monthlyDepositAmount"
+      name="monthlyAmount"
       label="월 납입액"
       placeholder="희망 월 납입액을 입력하세요"
       suffix="원"

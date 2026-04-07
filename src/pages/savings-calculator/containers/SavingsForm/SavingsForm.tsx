@@ -1,14 +1,14 @@
 import { Spacing } from 'tosslib';
 import GoalAmountField from './GoalAmountField/GoalAmountField';
 import SavingsPeriodField from './SavingsPeriodField/SavingsPeriodField';
-import MonthlyDepositAmountField from './MonthlyDepositAmountField/MonthlyDepositAmountField';
+import monthlyAmountField from './monthlyAmountField/monthlyAmountField';
 
 export default function SavingsForm() {
   return (
     <form onSubmit={e => e.preventDefault()}>
       <GoalAmountField />
       <Spacing size={16} />
-      <MonthlyDepositAmountField />
+      <monthlyAmountField />
       <Spacing size={16} />
       <SavingsPeriodField />
     </form>
