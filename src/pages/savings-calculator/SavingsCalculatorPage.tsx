@@ -1,4 +1,4 @@
-import { Assets, Border, colors, ListRow, NavigationBar, Spacing, Tab } from 'tosslib';
+import { Border, NavigationBar, Spacing } from 'tosslib';
 import SavingsForm from './containers/SavingsForm/SavingsForm';
 import SavingsFormProvider from './provider/SavingsFormProvider';
 import SavingsTabSection from './containers/SavingsTabSection/SavingsTabSection';
