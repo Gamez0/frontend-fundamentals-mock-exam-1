@@ -1,8 +1,8 @@
 import { useFilteredSavingsProducts } from '@/pages/savings-calculator/quries/savings-products-queries';
 import { Suspense } from 'react';
-import { useFormContext } from 'react-hook-form';
 import { ListRow } from 'tosslib';
 import SavingsProductItem from '@/pages/savings-calculator/components/SavingsProductItem/SavingsProductItem';
+import { useSavingsFormValuesContext } from '@/pages/savings-calculator/provider/SavingsFormProvider';
 
 export default function SavingsProductsTab() {
   return (
@@ -13,9 +13,8 @@ export default function SavingsProductsTab() {
 }
 
 function SavingsProductsList() {
-  const { watch } = useFormContext();
-  const monthlyAmount = watch('monthlyAmount');
-  const savingsPeriod = watch('savingsPeriod');
+  const { monthlyAmount, savingsPeriod } = useSavingsFormValuesContext();
+
   const filterOption = {
     monthlyAmount,
     savingsPeriod,
